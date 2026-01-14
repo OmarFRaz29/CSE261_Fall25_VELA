@@ -9,7 +9,13 @@ print("CTCS Vibrating String Simulation Started")
 
 
 
-
+# member 5 Mehedi Hasan Dipu:
+for i in range(1, Nx - 1): 
+    u[1, i] = u[0, i] + 0.5 * r * (u[0, i+1] - 2*u[0, i] + u[0, i-1])
+    
+     
+u[1, 0] = 0.0
+u[1, -1] = 0.0
 
 
 
