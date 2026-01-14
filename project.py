@@ -6,8 +6,10 @@ from mpl_toolkits.mplot3d import Axes3D
 print("CTCS Vibrating String Simulation Started")
 
 
-
-
+# Mamber 3 salman islam Tonmoy:
+x = np.linspace(0, L, Nx) 
+t = np.linspace(0, T, Nt) 
+u = np.zeros((Nt, Nx))
 
 
 
