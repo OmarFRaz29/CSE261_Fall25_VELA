@@ -21,7 +21,14 @@ dx = L / (Nx - 1); dt = T / (Nt - 1)
 r = (c * dt / dx) ** 2 
 print("CFL number:", r)
 
-
+#Member 4:
+px = 0.3; ph = 0.1 
+for i in range(Nx): 
+ if x[i] <= px: 
+  u[0, i] = ph * x[i] / px 
+ else: 
+  u[0, i] = ph * (L - x[i]) / (L - px) 
+  u[0, 0] = 0.0; u[0, -1] = 0.0
 
 # member 5 Mehedi Hasan Dipu:
 for i in range(1, Nx - 1): 
