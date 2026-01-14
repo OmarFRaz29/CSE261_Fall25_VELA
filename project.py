@@ -30,10 +30,22 @@ u[1, -1] = 0.0
 
 
 
+# member 7 Rakibul Hasan Rakib:
+energy = np.zeros(Nt)
+for n in range(Nt - 1):
+    ke = 0.0
+    pe = 0.0
+    for i in range(1, Nx - 1):
+        v = (u[n+1, i] - u[n, i]) / dt
+        g = (u[n, i+1] - u[n, i-1]) / (2*dx)
+        ke += 0.5 * v*v * dx
+        pe += 0.5 * c*c * g*g * dx
+    energy[n] = ke + pe
+print("Initial Energy:", energy[0])
+print("Final Energy:", energy[Nt-2])
 
 
-
-# member 8 Abyaj ahmed asif: 
+# member 9 Abyaj ahmed asif: 
 X, TT = np.meshgrid(x, t) 
 fig = plt.figure(figsize=(10,7)) 
 ax = fig.add_subplot(111, projection='3d') 
