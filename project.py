@@ -9,6 +9,16 @@ print("CTCS Vibrating String Simulation Started")
 
 
 
+
+
+
+# member 2 Fahim Islam Prithy:
+dx = L / (Nx - 1); dt = T / (Nt - 1) 
+r = (c * dt / dx) ** 2 
+print("CFL number:", r)
+
+
+
 # member 5 Mehedi Hasan Dipu:
 for i in range(1, Nx - 1): 
     u[1, i] = u[0, i] + 0.5 * r * (u[0, i+1] - 2*u[0, i] + u[0, i-1])
